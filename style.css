@@ -1,153 +1,431 @@
+@font-face {
+    font-family: 'Rubik-Medium';
+    src: url('./font/Rubik-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Rubik-Regular';
+    src: url('./font/Rubik-Regular.ttf');
+}
+
 body {
-	height: 600px;
-	border: 2px solid black;
-	background-color: #e6e2de;
+    min-height: 796px;
+    border: 2px solid black;
+    background-color: #e6e2de;
+    margin: 0;
+    font-family: 'Rubik-Medium';
+    font-size: 25px;
+    line-height: 1.25;
 }
 
 .inner {
-	height: 100%;
-	margin-left: 15px;
-	margin-right: 15px;
-	border-left: 2px solid black;
-	border-right: 2px solid black;
+    height: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
 }
 
 #frametopLanding {
-	height: 15px;
-	border-bottom: 2px solid black;
+    height: 15px;
+    border-bottom: 2px solid black;
 }
 
 #framebottomLanding {
-	height: 15px;
-	border-top: 2px solid black;
-	bottom: 0px;
+    height: 15px;
+    border-top: 2px solid black;
+    bottom: 0px;
 }
 
 #frametop {
-	height: 15px;
-	border-bottom: 2px solid black;
+    height: 15px;
+    border-bottom: 2px solid black;
 }
 
 #framebottom {
-	height: 15px;
-	border-top: 2px solid black;
-	bottom: 0px;
+    height: 15px;
+    border-top: 2px solid black;
+    bottom: 0px;
 }
 
 #content {
-	height: 566px;
+    height: calc(100vh - 38px);
+    min-height: 762px;
 }
 
 #enter {
-	background-color: #c6d9e2;
-	height: 521px;
-	border-bottom: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("images/1960s Item 16.jpg");
+    background-size: cover;
+    height: calc(100vh - 38px);
+    min-height: 762px;
+    border-bottom: 2px solid black;
+    cursor: pointer;
+}
+
+#walkout {
+    font-size: 200pt;
 }
 
 #navbar {
-	height: 45px;
+    bottom: 0px;
+    height: 45px;
 }
 
 .contentGrid {
-	display: grid;
-	grid-template-columns: repeat(8, 1fr);
-	grid-template-rows: 1fr;
-	grid-column-gap: 0px;
-	grid-row-gap: 0px; 	
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
 
 .contentGrid #left {
-	grid-area: 1 / 1 / 2 / 3;
-	border-right: 2px solid black;
+    grid-area: 1 / 1 / 2 / 3;
+    border-right: 2px solid black;
 }
 
 .contentGrid #center {
-	grid-area: 1 / 3 / 2 / 8;
+    grid-area: 1 / 3 / 2 / 8;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+}
+
+.contentGrid #center::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }
 
 .contentGrid #right {
-	grid-area: 1 / 8 / 2 / 9;
-	border-left: 2px solid black;
+    grid-area: 1 / 8 / 2 / 9;
+    border-left: 2px solid black;
 }
 
 .contentGrid #navitemHome {
-	grid-area: 1 / 1 / 2 / 3;
-	border-right: 2px solid black;
+    grid-area: 1 / 1 / 2 / 3;
+    border-right: 2px solid black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 .contentGrid #navitemAddress {
-	grid-area: 1 / 3 / 2 / 7;
-	border-right: 2px solid black;
+    grid-area: 1 / 3 / 2 / 7;
+    border-right: 2px solid black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 .contentGrid #navitemAbout {
-	grid-area: 1 / 7 / 2 / 8; 
-	border-right: 2px solid black;
+    grid-area: 1 / 7 / 2 / 8;
+    border-right: 2px solid black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
-.contentGrid #navitemDonate { 
-	grid-area: 1 / 8 / 2 / 9; 
+.contentGrid #navitemDonate {
+    grid-area: 1 / 8 / 2 / 9;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 .columnGrid {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(11, 1fr);
-	grid-column-gap: 0px;
-	grid-row-gap: 0px; 	
+    line-height: 1.05;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
 
 .columnGrid #title {
-	grid-area: 1/ 1/ 2/ 3;
-	border-bottom: 2px solid black;
+    grid-area: 1/ 1/ 2/ 3;
+    border-bottom: 2px solid black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 .columnGrid #subtitle {
-	grid-area: 2/ 1/ 4/ 3;
-	border-bottom: 2px solid black;
+    grid-area: 2/ 1/ 3/ 3;
+    border-bottom: 2px solid black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 .columnGrid #interference {
-	grid-area: 10/ 1/ 11/ 3;
-	border-top: 2px solid black;
-	border-bottom: 2px solid black;	
+    grid-area: 10/ 1/ 11/ 3;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 .columnGrid #about {
-	grid-area: 11/ 1/ 12/ 2;
-	border-right: 2px solid black;
+    grid-area: 11/ 1/ 12/ 2;
+    border-right: 2px solid black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 .columnGrid #donate {
-	grid-area: 11/ 2/ 12/ 3;
+    grid-area: 11/ 2/ 12/ 3;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 .columnGrid #intro {
-	grid-area: 1/ 1/ 2/ 3;
-	border-bottom: 2px solid black;
+    grid-area: 1/ 1/ 2/ 3;
+    border-bottom: 2px solid black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 .columnGrid #sixties {
-	grid-area: 7/ 1/ 8/ 3;
-	border-top: 2px solid black;
-	border-bottom: 2px solid black;	
+    grid-area: 7/ 1/ 8/ 3;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 .columnGrid #seventies {
-	grid-area: 8/ 1/ 9/ 3;
-	border-bottom: 2px solid black;
+    grid-area: 8/ 1/ 9/ 3;
+    border-bottom: 2px solid black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 .columnGrid #eighties {
-	grid-area: 9/ 1/ 10/ 3;
-	border-bottom: 2px solid black;
+    grid-area: 9/ 1/ 10/ 3;
+    border-bottom: 2px solid black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 .columnGrid #nineties {
-	grid-area: 10/ 1/ 11/ 3;
-	border-bottom: 2px solid black;
+    grid-area: 10/ 1/ 11/ 3;
+    border-bottom: 2px solid black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 .columnGrid #aughts {
-	grid-area: 11/ 1/ 12/ 3;
+    grid-area: 11/ 1/ 12/ 3;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.image-container {
+    position: relative;
+    box-sizing: border-box;
+    width: 25%;
+}
+
+.floatleft {
+    float: left;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.floatright {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 8px;
+    margin-top: 5px;
+}
+
+.image-container img {
+    width: 100%;
+}
+
+.image-container .after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    color: #FFF;
+}
+
+.image-container:hover .after {
+    display: block;
+    background: rgba(0, 0, 0, .6);
+}
+
+/*TODO: replace with a dynamically constructed table */
+#images {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#images .image-container {
+    outline: 1px solid black;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#images .image-container img {
+    max-height: 200px;
+    height: auto;
+    width: auto;
+}
+
+.hide {
+    display: none;
+}
+
+#text {
+    font-family: 'Rubik-Regular';
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 18px;
+    margin-bottom: 25px;
+}
+
+#detail {
+    display: grid; 
+    grid-template-rows: repeat(11, 1fr); 
+    height: 100%;
+}
+
+#image {
+    display: flex; 
+    box-sizing: border-box; 
+    grid-area: 1/ 1/ 11/ 2;
+    justify-content: space-between; 
+    align-items: center;
+    height: 100%; 
+    border-bottom: 2px solid black;
+    text-align: center;
+}
+
+#imageContent {
+    text-align: center; 
+    height: 100%; 
+    margin-top: 15%;
+}
+
+.detailActive {
+    text-decoration: underline;
+}
+
+.detailNumber {
+    cursor: pointer;
+    font-size: 16px;
+    padding-right: 4px;
+}
+
+.detailImage {
+    display: none;
+    max-height: 75%;
+    max-width: 75%;
+}
+
+.imageActive {
+    display: inline;
+}
+
+#detailFooter {
+    grid-area: 11/ 1/ 12/ 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 16px;
+}
+
+#detailCaption {
+    width: 70%;
+    text-align: right;
+}
+
+#galleryView {
+    cursor: pointer
+;}
+
+#galleryViewIcon {
+    height: 12px;
+    margin-right: 6px;
+}
+
+p {
+    margin: 0;
+}
+
+pre {
+    display: inline;
+    margin: 0;
+}
+
+.prev,
+.next {
+    position: relative;
+    cursor: pointer;
+    font-size: 40px;
+    font-family: 'Rubik-Regular';
+}
+
+.prev {
+    margin-left: 35px;
+}
+
+.next {
+    margin-right: 35px;    
 }
