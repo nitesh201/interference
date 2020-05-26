@@ -401,7 +401,8 @@ body {
     justify-content: space-between;
     margin-left: 25px;
     margin-right: 25px;
-    font-size: 16px;
+    font-size: 13px;
+    line-height: 1.15;
 }
 
 #detailCaption {
@@ -414,7 +415,7 @@ body {
 }
 
 #galleryViewIcon {
-    height: 12px;
+    height: 9px;
     margin-right: 6px;
 }
 
