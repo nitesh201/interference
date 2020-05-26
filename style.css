@@ -9,7 +9,7 @@
 }
 
 body {
-    min-height: 796px;
+    min-height: 496px;
     border: 2px solid black;
     background-color: #e6e2de;
     margin: 0;
@@ -50,7 +50,7 @@ body {
 
 #content {
     height: calc(100vh - 38px);
-    min-height: 762px;
+    min-height: 462px;
 }
 
 #enter {
@@ -60,7 +60,7 @@ body {
     background-image: url("images/1960s Item 16.jpg");
     background-size: cover;
     height: calc(100vh - 38px);
-    min-height: 762px;
+    min-height: 462px;
     border-bottom: 2px solid black;
     cursor: pointer;
 }
@@ -264,6 +264,12 @@ body {
     flex-direction: column;
 }
 
+.inset-image-container {
+    position: relative;
+    box-sizing: border-box;
+    width: 25%;
+}
+
 .image-container {
     position: relative;
     box-sizing: border-box;
@@ -285,10 +291,17 @@ body {
 }
 
 .image-container img {
+    max-width: 90%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.inset-image-container img {
     width: 100%;
 }
 
-.image-container .after {
+.image-container .after, .inset-image-container .after {
     position: absolute;
     top: 0;
     left: 0;
@@ -298,7 +311,7 @@ body {
     color: #FFF;
 }
 
-.image-container:hover .after {
+.image-container:hover .after, .inset-image-container:hover .after {
     display: block;
     background: rgba(0, 0, 0, .6);
 }
@@ -338,25 +351,25 @@ body {
 }
 
 #detail {
-    display: grid; 
-    grid-template-rows: repeat(11, 1fr); 
+    display: grid;
+    grid-template-rows: repeat(11, 1fr);
     height: 100%;
 }
 
 #image {
-    display: flex; 
-    box-sizing: border-box; 
+    display: flex;
+    box-sizing: border-box;
     grid-area: 1/ 1/ 11/ 2;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
-    height: 100%; 
+    height: 100%;
     border-bottom: 2px solid black;
     text-align: center;
 }
 
 #imageContent {
-    text-align: center; 
-    height: 100%; 
+    text-align: center;
+    height: 100%;
     margin-top: 15%;
 }
 
@@ -397,8 +410,8 @@ body {
 }
 
 #galleryView {
-    cursor: pointer
-;}
+    cursor: pointer;
+}
 
 #galleryViewIcon {
     height: 12px;
@@ -427,5 +440,19 @@ pre {
 }
 
 .next {
-    margin-right: 35px;    
+    margin-right: 35px;
+}
+
+@media screen and (max-height: 800px) {
+    body {
+        font-size: 20px;
+    }
+
+    .detailNumber {
+        font-size: 14px;
+    }
+
+    .detailFooter {
+        font-size: 14px;
+    }
 }
