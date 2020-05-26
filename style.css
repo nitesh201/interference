@@ -401,7 +401,7 @@ body {
     justify-content: space-between;
     margin-left: 25px;
     margin-right: 25px;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.15;
 }
 
@@ -415,7 +415,7 @@ body {
 }
 
 #galleryViewIcon {
-    height: 9px;
+    height: 12px;
     margin-right: 6px;
 }
 
@@ -450,10 +450,14 @@ pre {
     }
 
     .detailNumber {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .detailFooter {
-        font-size: 14px;
+        font-size: 13px;
+    }
+
+    #galleryViewIcon {
+        height: 9px;
     }
 }
