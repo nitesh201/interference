@@ -372,7 +372,7 @@ body {
     display: flex;
     box-sizing: border-box;
     grid-area: 1/ 1/ 11/ 2;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 100%;
     border-bottom: 2px solid black;
