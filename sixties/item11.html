@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div class="inner">
+        <div id="frametop" class="contentGrid">
+            <div id="left"></div>
+            <div id="center"></div>
+            <div id="right"></div>
+        </div>
+        <div id="content" class="contentGrid">
+            <div id="left" class="columnGrid">
+                <div id="title">WALKOUT</div>
+                <div id="subtitle">A BRIEF HISTORY OF <br /> STUDENT ORGANIZING</div>
+                <div id="interference">Interference Archive</div>
+                <div id="about">About</div>
+                <div id="donate">Donate</div>
+            </div>
+            <div id="tabletHeader">WALKOUT: A BRIEF HISTORY OF STUDENT ORGANIZING</div>
+            <div id="center">
+                <div id="detail">
+                    <div id="image">
+                        <div class="prev" onclick="location.href='item10.html'">&lt;</div>
+                        <div id="imageContent">
+                            <div id="slideshow">
+                                <img src="./images/1960s_Item_11.jpg" class="detailImage imageActive" />
+                            </div>
+                        </div>
+                        <div class="next" onclick="location.href='item12.html'">&gt;</div>
+                    </div>
+                    <div id="detailFooter">
+                        <div id="galleryView"><img src="../GalleryView.svg" id="galleryViewIcon">GALLERY VIEW</div>
+                        <div id="detailCaption">Image 11 Caption</div>
+                    </div>
+                </div>
+            </div>
+            <div id="tabletFooter">
+                <div id="interference">Interference Archive</div>
+                <div id="about">About</div>
+                <div id="donate">Donate</div>
+            </div>
+            <div id="right" class="columnGrid">
+                <div id="hamburger">#</div>
+                <div id="intro" class="navElement"><a href="../introduction.html"><span class="linkDecorator">&#8226</span> Intro <span class="linkDecorator">&#8226</span></a></div>
+                <div id="sixties" class="activeNavElement navElement"><a href="/sixties">&#8226 1960s &#8226</a></div>
+                <div id="seventies" class="navElement"><a href="/seventies"><span class="linkDecorator">&#8226</span> 1970s <span class="linkDecorator">&#8226</span></a></div>
+                <div id="eighties" class="navElement"><a href="/eighties"><span class="linkDecorator">&#8226</span> 1980s <span class="linkDecorator">&#8226</span></a></div>
+                <div id="nineties" class="navElement"><a href="/nineties"><span class="linkDecorator">&#8226</span> 1990s <span class="linkDecorator">&#8226</span></a></div>
+                <div id="aughts" class="navElement"><a href="/aughts"><span class="linkDecorator">&#8226</span> 2000s <span class="linkDecorator">&#8226</span></a></div>
+            </div>
+        </div>
+        <div id="framebottom" class="contentGrid">
+            <div id="left"></div>
+            <div id="center"></div>
+            <div id="right"></div>
+        </div>
+    </div>
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div id="modal-caption"></div>
+    </div>
+    <script type="text/javascript" src="../mobile_nav_script.js"></script>
+    <script type="text/javascript" src="../detail_script.js"></script>
+</body>
+
+</html>
