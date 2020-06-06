@@ -475,7 +475,7 @@ pre {
     margin-right: 35px;
 }
 
-@media screen and (max-height: 800px), screen and (max-width: 1100px) {
+@media only screen and (max-height: 800px), screen and (max-width: 1100px) {
     body {
         font-size: 20px;
     }
@@ -497,7 +497,7 @@ pre {
     }
 }
 
-@media screen and (max-width: 1100px) {
+@media only screen and (max-width: 1100px) {
     .contentGrid {
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(12, 1fr);
@@ -605,7 +605,7 @@ pre {
 }
 
 /*fixes a UI bug where hidden nav items remain invisible when width changes from mobile to tablet*/
-@media screen and (min-width: 801px) {
+@media only screen and (min-width: 801px) {
     .columnGrid #intro, #sixties, #seventies, #eighties, #nineties, #aughts {
         display: flex !important;
     }
@@ -630,7 +630,7 @@ pre {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
     .inset-image-container .after {
         position: relative;
         display: block;
@@ -716,7 +716,7 @@ pre {
     }
 }
 
-@media screen and (max-width: 700px) {
+@media only screen and (max-width: 700px) {
     body {
         font-size: 18px;
     }
