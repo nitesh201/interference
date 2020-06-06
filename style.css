@@ -57,7 +57,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("images/1960s Item 16.jpg");
+    background-image: url("sixties/images/thumb/1960s_Item_16_thumb.jpg");
     background-size: cover;
     height: calc(100vh - 38px);
     min-height: 462px;
