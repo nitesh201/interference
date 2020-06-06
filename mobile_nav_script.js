@@ -15,7 +15,21 @@ var nav_click = function(event) {
 			}
 		}
 	}
+	var menu = document.getElementById("right");
+	if (menu.style.zIndex === '') {
+		menu.style.zIndex = "500";
+	}
+	else {
+		menu.style.zIndex = '';
+	}
+	var zIndex = menu.style.zIndex;
+	console.log("zIndex " + zIndex);
 }
 
 var hamburger = document.getElementById("hamburger");
 hamburger.addEventListener("click", nav_click);
+
+var menu = document.getElementById("right");
+console.log(menu.style);
+var zIndex = menu.style.zIndex;
+console.log("initial zIndex " + zIndex);

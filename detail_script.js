@@ -1,3 +1,10 @@
+var toggle_extended_captions = function(event) {
+    var image = document.getElementById("image");
+    image.classList.toggle('imageShrink');
+    var extendedCaption = document.getElementById("extendedCaption");
+    extendedCaption.classList.toggle('hide');
+}
+
 var detail_click = function(event) {
     document.getElementsByClassName("imageActive")[0].classList.toggle("imageActive");
     document.getElementsByClassName("detailActive")[0].classList.toggle("detailActive");
@@ -33,4 +40,7 @@ for (var i = 0; i < imgs.length; i++) {
 var span = document.getElementsByClassName("close")[0];
 span.onclick = function() {
   modal.style.display = "none";
-} 
+}
+
+var moreInfo = document.getElementById("moreInfo");
+moreInfo.addEventListener("click", toggle_extended_captions);

@@ -99,7 +99,7 @@ body {
 
 .contentGrid #center {
     grid-area: 1 / 3 / 2 / 8;
-    overflow-y: scroll;
+    overflow: auto;
     scrollbar-width: none;
     /* Firefox */
     -ms-overflow-style: none;
@@ -185,6 +185,7 @@ body {
 }
 
 .columnGrid #interference {
+    margin-top: -2px;
     grid-area: 10/ 1/ 11/ 3;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
@@ -384,6 +385,8 @@ body {
 }
 
 #image {
+    position: relative;
+    z-index: 1;
     display: flex;
     box-sizing: border-box;
     grid-area: 1/ 1/ 11/ 2;
@@ -475,7 +478,8 @@ pre {
     margin-right: 35px;
 }
 
-@media only screen and (max-height: 800px), screen and (max-width: 1100px) {
+@media only screen and (max-height: 800px),
+screen and (max-width: 1100px) {
     body {
         font-size: 20px;
     }
@@ -564,41 +568,48 @@ pre {
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: 1fr;
     }
+
     .columnGrid #intro {
         grid-area: 1/ 1/ 2/ 2;
         border: 0px;
         border-right: 2px solid black;
         border-bottom: 2px solid black;
     }
+
     .columnGrid #sixties {
         grid-area: 1/ 2/ 2/ 3;
         border: 0px;
         border-right: 2px solid black;
         border-bottom: 2px solid black;
     }
+
     .columnGrid #seventies {
         grid-area: 1/ 3/ 2/ 4;
         border: 0px;
         border-right: 2px solid black;
         border-bottom: 2px solid black;
     }
+
     .columnGrid #eighties {
         grid-area: 1/ 4/ 2/ 5;
         border: 0px;
         border-right: 2px solid black;
         border-bottom: 2px solid black;
     }
+
     .columnGrid #nineties {
         grid-area: 1/ 5/ 2/ 6;
         border: 0px;
         border-right: 2px solid black;
         border-bottom: 2px solid black;
     }
+
     .columnGrid #aughts {
         grid-area: 1/ 6/ 2/ 7;
         border: 0px;
         border-bottom: 2px solid black;
     }
+
     .inset-image-container {
         width: 30%;
     }
@@ -606,7 +617,13 @@ pre {
 
 /*fixes a UI bug where hidden nav items remain invisible when width changes from mobile to tablet*/
 @media only screen and (min-width: 801px) {
-    .columnGrid #intro, #sixties, #seventies, #eighties, #nineties, #aughts {
+
+    .columnGrid #intro,
+    #sixties,
+    #seventies,
+    #eighties,
+    #nineties,
+    #aughts {
         display: flex !important;
     }
 }
@@ -622,7 +639,7 @@ pre {
         line-height: 1.1;
         padding-bottom: 10px;
     }
-    
+
     .inset-image-container:hover .after {
         position: relative;
         display: block;
@@ -641,7 +658,7 @@ pre {
         line-height: 1.1;
         padding-bottom: 10px;
     }
-    
+
     .inset-image-container:hover .after {
         position: relative;
         display: block;
@@ -650,10 +667,12 @@ pre {
 
     .prev {
         margin-left: 10px;
+        z-index: 1;
     }
 
     .next {
         margin-right: 10px;
+        z-index: 1;
     }
 
     .image-container {
@@ -662,13 +681,14 @@ pre {
 
     .contentGrid #right {
         grid-area: 2/ 1 / 8/ 9;
-        z-index: 1;
+        position: relative;
     }
 
     .columnGrid {
         display: flex;
         flex-direction: column;
     }
+
     .columnGrid #hamburger {
         display: inline;
         position: absolute;
@@ -677,40 +697,56 @@ pre {
         font-size: 30px;
         cursor: pointer;
     }
-    .columnGrid #intro, #sixties, #seventies, #eighties, #nineties, #aughts {
+
+    .columnGrid #intro,
+    #sixties,
+    #seventies,
+    #eighties,
+    #nineties,
+    #aughts {
         border: 0px;
         border-bottom: 2px solid black;
         border-right: 0px !important;
         height: 50px;
         background-color: #e6e2de;
     }
+
     .columnGrid #intro:not(.activeNavElement) {
         display: none;
     }
+
     .columnGrid #sixties:not(.activeNavElement) {
         display: none;
     }
+
     .columnGrid #seventies:not(.activeNavElement) {
         display: none;
     }
+
     .columnGrid #eighties:not(.activeNavElement) {
         display: none;
     }
+
     .columnGrid #nineties:not(.activeNavElement) {
         display: none;
     }
+
     .columnGrid #aughts:not(.activeNavElement) {
         display: none;
     }
+
     .inset-image-container {
         width: 100%;
     }
+
     #galleryViewText {
         display: none;
     }
+
     #galleryViewIcon {
         height: 13px;
     }
+
     #detailCaption {
         width: 90%;
     }
@@ -818,4 +854,36 @@ a:hover .linkDecorator {
     color: red;
     text-decoration: none;
     cursor: pointer;
+}
+
+#moreInfo {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    flex-shrink: 0;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#moreInfo div {
+    text-align: center; 
+    padding: 5px;
+}
+
+#moreInfo #upArrow {
+    border-left: 2px solid black;
+}
+
+#extendedCaption {
+    grid-area: 10/ 1/ 11/ 2; 
+    font-size: 14px;
+    border-bottom: 2px solid black;
+}
+
+.imageShrink {
+    grid-area: 1/ 1/ 10/ 2 !important;
 }
