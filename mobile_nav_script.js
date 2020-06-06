@@ -14,7 +14,7 @@ var nav_click = function(event) {
 			}
 		}
 	}
-	var menu = document.getElementById("right");
+	var menu = document.querySelector("#content #right");
 	if (menu.style.zIndex === '') {
 		menu.style.zIndex = "500";
 	}
@@ -26,6 +26,3 @@ var nav_click = function(event) {
 
 var hamburger = document.getElementById("hamburger");
 hamburger.addEventListener("click", nav_click);
-
-var menu = document.getElementById("right");
-var zIndex = menu.style.zIndex;

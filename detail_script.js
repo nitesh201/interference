@@ -3,6 +3,11 @@ var toggle_extended_captions = function(event) {
     image.classList.toggle('imageShrink');
     var extendedCaption = document.getElementById("extendedCaption");
     extendedCaption.classList.toggle('hide');
+
+    var moreInfo = document.getElementById("moreInfo");
+    var hideInfo = document.getElementById("hideInfo");
+    moreInfo.classList.toggle('hide');
+    hideInfo.classList.toggle('hide');
 }
 
 var detail_click = function(event) {
@@ -42,7 +47,8 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 
-var moreInfo = document.getElementById("moreInfo");
-if (moreInfo) {
-    moreInfo.addEventListener("click", toggle_extended_captions);
-}
+var extended = document.getElementsByClassName("extended");
+Array.prototype.forEach.call(
+    extended,
+    element => element.addEventListener("click", toggle_extended_captions)
+);

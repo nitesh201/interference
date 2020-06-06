@@ -366,7 +366,7 @@ body {
 }
 
 .hide {
-    display: none;
+    display: none !important;
 }
 
 #text {
@@ -432,8 +432,10 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-left: 25px;
-    margin-right: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
     font-size: 16px;
     line-height: 1.15;
 }
@@ -452,6 +454,9 @@ body {
     margin-right: 6px;
 }
 
+#hamburgerIcon {
+    height: 12px;
+}
 
 p {
     margin: 0;
@@ -478,6 +483,156 @@ pre {
     margin-right: 35px;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.linkDecorator {
+    display: none;
+}
+
+a:hover .linkDecorator {
+    display: inline;
+}
+
+#slideshow {
+    max-height: 80%;
+    cursor: pointer;
+}
+
+#modal-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(230, 226, 222, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 95%;
+    /*  max-width: 700px;*/
+}
+
+.modal-content,
+#modal-caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.extended {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    flex-shrink: 0;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.extended div {
+    text-align: center;
+    padding: 5px;
+}
+
+.extended .arrow {
+    border-left: 2px solid black;
+    font-family: sans-serif;
+}
+
+#extendedCaption {
+    grid-area: 9/ 1/ 11/ 2;
+    border-bottom: 2px solid black;
+    overflow: auto;
+    font-size: 16px;
+    line-height: 1.15;
+    padding: 20px;
+}
+
+.imageShrink {
+    grid-area: 1/ 1/ 9/ 2 !important;
+}
+
+/*fixes a UI bug where hidden nav items remain invisible when width changes from mobile to tablet*/
+@media only screen and (min-width: 801px) {
+
+    .columnGrid #intro,
+    #sixties,
+    #seventies,
+    #eighties,
+    #nineties,
+    #aughts {
+        display: flex !important;
+    }
+}
+
+@media (hover: none) {
+    .inset-image-container .after {
+        position: relative;
+        display: block;
+        color: black;
+        text-align: center;
+        font-size: 14px;
+        font-family: 'Rubik-Medium';
+        line-height: 1.1;
+        padding-bottom: 10px;
+    }
+
+    .inset-image-container:hover .after {
+        position: relative;
+        display: block;
+        background: rgba(0, 0, 0, 0.0);
+    }
+}
+
 @media only screen and (max-height: 800px),
 screen and (max-width: 1100px) {
     body {
@@ -489,6 +644,14 @@ screen and (max-width: 1100px) {
     }
 
     #detailFooter {
+        font-size: 13px;
+    }
+
+    .extended {
+        font-size: 13px;
+    }
+
+    #extendedCaption {
         font-size: 13px;
     }
 
@@ -520,8 +683,8 @@ screen and (max-width: 1100px) {
     }
 
     .contentGrid #right {
-        grid-area: 2/ 1 / 3/ 9;
         border: 0px;
+        grid-area: 2/ 1/ 3/ 9;
     }
 
     .contentGrid #tabletHeader {
@@ -615,38 +778,6 @@ screen and (max-width: 1100px) {
     }
 }
 
-/*fixes a UI bug where hidden nav items remain invisible when width changes from mobile to tablet*/
-@media only screen and (min-width: 801px) {
-
-    .columnGrid #intro,
-    #sixties,
-    #seventies,
-    #eighties,
-    #nineties,
-    #aughts {
-        display: flex !important;
-    }
-}
-
-@media (hover: none) {
-    .inset-image-container .after {
-        position: relative;
-        display: block;
-        color: black;
-        text-align: center;
-        font-size: 14px;
-        font-family: 'Rubik-Medium';
-        line-height: 1.1;
-        padding-bottom: 10px;
-    }
-
-    .inset-image-container:hover .after {
-        position: relative;
-        display: block;
-        background: rgba(0, 0, 0, 0.0);
-    }
-}
-
 @media only screen and (max-width: 800px) {
     .inset-image-container .after {
         position: relative;
@@ -675,12 +806,16 @@ screen and (max-width: 1100px) {
         z-index: 1;
     }
 
+    #imageContent {
+        width: 70%;
+    }
+
     .image-container {
         width: 50%;
     }
 
     .contentGrid #right {
-        grid-area: 2/ 1 / 8/ 9;
+        grid-area: 2/ 1/ 8/ 9;
         position: relative;
     }
 
@@ -692,8 +827,8 @@ screen and (max-width: 1100px) {
     .columnGrid #hamburger {
         display: inline;
         position: absolute;
-        right: 28px;
-        margin-top: 8px;
+        right: 12px;
+        margin-top: 5px;
         font-size: 30px;
         cursor: pointer;
     }
@@ -750,9 +885,20 @@ screen and (max-width: 1100px) {
     #detailCaption {
         width: 90%;
     }
+
+    #extendedCaption {
+        padding: 10px;
+        hyphens: auto;
+    }
+
+    #detailFooter {
+        margin-left: 10px;
+        margin-right: 10px;
+        hyphens: auto;
+    }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 600px) {
     body {
         font-size: 18px;
     }
@@ -772,118 +918,27 @@ screen and (max-width: 1100px) {
     .hoverCaption {
         font-size: 11px;
     }
-}
 
-a {
-    text-decoration: none;
-    color: black;
-}
-
-.linkDecorator {
-    display: none;
-}
-
-a:hover .linkDecorator {
-    display: inline;
-}
-
-#slideshow {
-    max-height: 80%;
-    cursor: pointer;
-}
-
-#modal-caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(230, 226, 222, 0.9);
-}
-
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 95%;
-    /*  max-width: 700px;*/
-}
-
-.modal-content,
-#modal-caption {
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-    from {
-        transform: scale(0)
+    .extended {
+        font-size: 11px;
     }
 
-    to {
-        transform: scale(1)
+    #extendedCaption {
+        font-size: 11px;
     }
-}
 
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: black;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
+    .contentGrid #tabletHeader {
+        padding: 5px;
+        line-height: 1;
+        font-size: 14px;
+    }
 
-.close:hover,
-.close:focus {
-    color: red;
-    text-decoration: none;
-    cursor: pointer;
-}
+    .contentGrid #tabletFooter {
+        line-height: 1;
+        font-size: 14px;
+    }
 
-#moreInfo {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    flex-shrink: 0;
-    border-left: 2px solid black;
-    border-top: 2px solid black;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-#moreInfo div {
-    text-align: center; 
-    padding: 5px;
-}
-
-#moreInfo #upArrow {
-    border-left: 2px solid black;
-}
-
-#extendedCaption {
-    grid-area: 10/ 1/ 11/ 2; 
-    font-size: 14px;
-    border-bottom: 2px solid black;
-}
-
-.imageShrink {
-    grid-area: 1/ 1/ 10/ 2 !important;
+    .contentGrid #right {
+        font-size: 14px;
+    }
 }
