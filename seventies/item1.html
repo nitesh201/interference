@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../style.css">
 </head>
@@ -18,10 +18,17 @@
             <div id="left" class="columnGrid">
                 <div id="title">WALKOUT</div>
                 <div id="subtitle">A BRIEF HISTORY OF <br /> STUDENT ORGANIZING</div>
-                <div id="interference">Interference Archive</div>
-                <div id="about">About</div>
-                <div id="donate">Donate</div>
+                <div id="interference">
+                    <a href="https://interferencearchive.org/"><span class="linkDecorator">&#8226</span> Interference Archive <span class="linkDecorator">&#8226</span></a>
+                </div>
+                <div id="about">
+                    <a href="https://interferencearchive.org/our-mission/"><span class="linkDecorator">&#8226</span> About <span class="linkDecorator">&#8226</span></a>
+                </div>
+                <div id="donate">
+                    <a href="https://interferencearchive.org/become-a-member/"><span class="linkDecorator">&#8226</span> Donate <span class="linkDecorator">&#8226</span></a>
+                </div>
             </div>
+            <div id="tabletHeader">WALKOUT: A BRIEF HISTORY OF STUDENT ORGANIZING</div>
             <div id="center">
                 <div id="detail">
                     <div id="image">
@@ -34,13 +41,26 @@
                         <div class="next" onclick="location.href='item2.html'">&gt;</div>
                     </div>
                     <div id="detailFooter">
-                        <div id="galleryView"><img src="../GalleryView.svg" id="galleryViewIcon">GALLERY VIEW</div>
+                        <div id="galleryView" onclick="location.href='./index.html'"><img src="../GalleryView.svg" id="galleryViewIcon">
+                            <span id="galleryViewText">GALLERY VIEW</span>
+                        </div>
                         <div id="detailCaption">WIMP, <i>Avenge</i>. 1970. Poster</div>
                     </div>
                 </div>
             </div>
+            <div id="tabletFooter">
+                <div id="interference">
+                    <a href="https://interferencearchive.org/"><span class="linkDecorator">&#8226</span> Interference Archive <span class="linkDecorator">&#8226</span></a>
+                </div>
+                <div id="about">
+                    <a href="https://interferencearchive.org/our-mission/"><span class="linkDecorator">&#8226</span> About <span class="linkDecorator">&#8226</span></a>
+                </div>
+                <div id="donate">
+                    <a href="https://interferencearchive.org/become-a-member/"><span class="linkDecorator">&#8226</span> Donate <span class="linkDecorator">&#8226</span></a>
+                </div>
+            </div>
             <div id="right" class="columnGrid">
-                <div id="hamburger">#</div>
+                <div id="hamburger"><img src="../hamburger.svg" id="hamburgerIcon"></div>
                 <div id="intro"><a href="../introduction.html"><span class="linkDecorator">&#8226</span> Intro <span class="linkDecorator">&#8226</span></a></div>
                 <div id="sixties"><a href="/sixties"><span class="linkDecorator">&#8226</span> 1960s <span class="linkDecorator">&#8226</span></a></div>
                 <div id="seventies"><a href="/seventies">&#8226 1970s &#8226</a></div>

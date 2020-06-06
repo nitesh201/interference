@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../style.css">
 </head>
@@ -18,9 +18,15 @@
             <div id="left" class="columnGrid">
                 <div id="title">WALKOUT</div>
                 <div id="subtitle">A BRIEF HISTORY OF <br /> STUDENT ORGANIZING</div>
-                <div id="interference">Interference Archive</div>
-                <div id="about">About</div>
-                <div id="donate">Donate</div>
+                <div id="interference">
+                    <a href="https://interferencearchive.org/"><span class="linkDecorator">&#8226</span> Interference Archive <span class="linkDecorator">&#8226</span></a>
+                </div>
+                <div id="about">
+                    <a href="https://interferencearchive.org/our-mission/"><span class="linkDecorator">&#8226</span> About <span class="linkDecorator">&#8226</span></a>
+                </div>
+                <div id="donate">
+                    <a href="https://interferencearchive.org/become-a-member/"><span class="linkDecorator">&#8226</span> Donate <span class="linkDecorator">&#8226</span></a>
+                </div>
             </div>
             <div id="tabletHeader">WALKOUT: A BRIEF HISTORY OF STUDENT ORGANIZING</div>
             <div id="center">
@@ -33,20 +39,39 @@
                             </div>
                         </div>
                         <div class="next" onclick="location.href='item12.html'">&gt;</div>
+                        <div id="moreInfo" class="extended">
+                            <div>More Info</div>
+                            <div class="arrow">&#923;</div>
+                        </div>
+                        <div id="hideInfo" class="hide extended">
+                            <div>Hide Info</div>
+                            <div class="arrow">V</div>
+                        </div>
+                    </div>
+                    <div id="extendedCaption" class="hide">
+                        On April 9th, 1969, students organized by SDS occupied Harvard’s University Hall and demanded the abolition of the university's Reserve Officer Training Corps program, reduced rents in university owned buildings, and a promise that the university would not tear down buildings to expand its medical complex in a working class neighborhood. 
                     </div>
                     <div id="detailFooter">
-                        <div id="galleryView"><img src="../GalleryView.svg" id="galleryViewIcon">GALLERY VIEW</div>
+                        <div id="galleryView" onclick="location.href='./index.html'"><img src="../GalleryView.svg" id="galleryViewIcon">
+                            <span id="galleryViewText">GALLERY VIEW</span>
+                        </div>
                         <div id="detailCaption"><i>STRIKE: Confrontation at Harvard 1969</i>. 1969/1970. Vinyl record, 12.5 × 12.5" </div>
                     </div>
                 </div>
             </div>
             <div id="tabletFooter">
-                <div id="interference">Interference Archive</div>
-                <div id="about">About</div>
-                <div id="donate">Donate</div>
+                <div id="interference">
+                    <a href="https://interferencearchive.org/"><span class="linkDecorator">&#8226</span> Interference Archive <span class="linkDecorator">&#8226</span></a>
+                </div>
+                <div id="about">
+                    <a href="https://interferencearchive.org/our-mission/"><span class="linkDecorator">&#8226</span> About <span class="linkDecorator">&#8226</span></a>
+                </div>
+                <div id="donate">
+                    <a href="https://interferencearchive.org/become-a-member/"><span class="linkDecorator">&#8226</span> Donate <span class="linkDecorator">&#8226</span></a>
+                </div>
             </div>
             <div id="right" class="columnGrid">
-                <div id="hamburger">#</div>
+                <div id="hamburger"><img src="../hamburger.svg" id="hamburgerIcon"></div>
                 <div id="intro" class="navElement"><a href="../introduction.html"><span class="linkDecorator">&#8226</span> Intro <span class="linkDecorator">&#8226</span></a></div>
                 <div id="sixties" class="activeNavElement navElement"><a href="/sixties">&#8226 1960s &#8226</a></div>
                 <div id="seventies" class="navElement"><a href="/seventies"><span class="linkDecorator">&#8226</span> 1970s <span class="linkDecorator">&#8226</span></a></div>

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../style.css">
 </head>
@@ -18,9 +18,15 @@
             <div id="left" class="columnGrid">
                 <div id="title">WALKOUT</div>
                 <div id="subtitle">A BRIEF HISTORY OF <br /> STUDENT ORGANIZING</div>
-                <div id="interference">Interference Archive</div>
-                <div id="about">About</div>
-                <div id="donate">Donate</div>
+                <div id="interference">
+                    <a href="https://interferencearchive.org/"><span class="linkDecorator">&#8226</span> Interference Archive <span class="linkDecorator">&#8226</span></a>
+                </div>
+                <div id="about">
+                    <a href="https://interferencearchive.org/our-mission/"><span class="linkDecorator">&#8226</span> About <span class="linkDecorator">&#8226</span></a>
+                </div>
+                <div id="donate">
+                    <a href="https://interferencearchive.org/become-a-member/"><span class="linkDecorator">&#8226</span> Donate <span class="linkDecorator">&#8226</span></a>
+                </div>
             </div>
             <div id="tabletHeader">WALKOUT: A BRIEF HISTORY OF STUDENT ORGANIZING</div>
             <div id="center">
@@ -33,20 +39,39 @@
                             </div>
                         </div>
                         <div class="next" onclick="location.href='item7.html'">&gt;</div>
+                        <div id="moreInfo" class="extended">
+                            <div>More Info</div>
+                            <div class="arrow">&#923;</div>
+                        </div>
+                        <div id="hideInfo" class="hide extended">
+                            <div>Hide Info</div>
+                            <div class="arrow">V</div>
+                        </div>
+                    </div>
+                    <div id="extendedCaption" class="hide">
+                        This <i>Ramparts</i> cover highlights Berkley’s role as a center of student protest. Five years earlier, Berkeley birthed the Free Speech movement when college administration reacted to student protest by banning tabling on behalf of activist groups. In response, the Congress on Racial Equality (CORE) set up a table and their campus chairman, Jack Weinberg, was promptly arrested. This prompted a 24-hour protest, with Mario Savio emerging as a leader of the new Free Speech movement; Savio and Weinberg had both previously organized with CORE and SNCC for voter registration in the south. Free Speech protestors organized the first large scale protest of the Vietnam war in 1965. In 1969, seeking a space for free speech and political organizing, students appropriated a piece of unused campus land to create People’s Park. Campus administration announced a plan to build an athletic field on the site; police responded to student protest by charging into the crowd with nightsticks and shotguns loaded with buckshot. James Rector, watching from a nearby roof, was killed by buckshot. Governor Ronald Reagan declared a state of emergency and National Guardsmen patrolled the streets of Berkley for two weeks while the University erected a fence around the park. The site continues to function as a park, although as recently as 2018 the University proposed developing it for student housing. 
                     </div>
                     <div id="detailFooter">
-                        <div id="galleryView"><img src="../GalleryView.svg" id="galleryViewIcon">GALLERY VIEW</div>
+                        <div id="galleryView" onclick="location.href='./index.html'"><img src="../GalleryView.svg" id="galleryViewIcon">
+                            <span id="galleryViewText">GALLERY VIEW</span>
+                        </div>
                         <div id="detailCaption"><i>Ramparts</i>. August 1969. Magazine, 8.5 × 11" </div>
                     </div>
                 </div>
             </div>
             <div id="tabletFooter">
-                <div id="interference">Interference Archive</div>
-                <div id="about">About</div>
-                <div id="donate">Donate</div>
+                <div id="interference">
+                    <a href="https://interferencearchive.org/"><span class="linkDecorator">&#8226</span> Interference Archive <span class="linkDecorator">&#8226</span></a>
+                </div>
+                <div id="about">
+                    <a href="https://interferencearchive.org/our-mission/"><span class="linkDecorator">&#8226</span> About <span class="linkDecorator">&#8226</span></a>
+                </div>
+                <div id="donate">
+                    <a href="https://interferencearchive.org/become-a-member/"><span class="linkDecorator">&#8226</span> Donate <span class="linkDecorator">&#8226</span></a>
+                </div>
             </div>
             <div id="right" class="columnGrid">
-                <div id="hamburger">#</div>
+                <div id="hamburger"><img src="../hamburger.svg" id="hamburgerIcon"></div>
                 <div id="intro" class="navElement"><a href="../introduction.html"><span class="linkDecorator">&#8226</span> Intro <span class="linkDecorator">&#8226</span></a></div>
                 <div id="sixties" class="activeNavElement navElement"><a href="/sixties">&#8226 1960s &#8226</a></div>
                 <div id="seventies" class="navElement"><a href="/seventies"><span class="linkDecorator">&#8226</span> 1970s <span class="linkDecorator">&#8226</span></a></div>
