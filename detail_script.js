@@ -8,6 +8,10 @@ var toggle_extended_captions = function(event) {
     var hideInfo = document.getElementById("hideInfo");
     moreInfo.classList.toggle('hide');
     hideInfo.classList.toggle('hide');
+
+    var active_image = document.getElementsByClassName("imageActive")[0];
+    var active_image_content = active_image.innerHTML;
+    active_image.innerHTML = active_image_content;
 }
 
 var detail_click = function(event) {
