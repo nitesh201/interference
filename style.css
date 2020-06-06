@@ -449,6 +449,7 @@ body {
     margin-right: 6px;
 }
 
+
 p {
     margin: 0;
 }
@@ -604,13 +605,49 @@ pre {
 }
 
 /*fixes a UI bug where hidden nav items remain invisible when width changes from mobile to tablet*/
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 801px) {
     .columnGrid #intro, #sixties, #seventies, #eighties, #nineties, #aughts {
         display: flex !important;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media (hover: none) {
+    .inset-image-container .after {
+        position: relative;
+        display: block;
+        color: black;
+        text-align: center;
+        font-size: 14px;
+        font-family: 'Rubik-Medium';
+        line-height: 1.1;
+        padding-bottom: 10px;
+    }
+    
+    .inset-image-container:hover .after {
+        position: relative;
+        display: block;
+        background: rgba(0, 0, 0, 0.0);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .inset-image-container .after {
+        position: relative;
+        display: block;
+        color: black;
+        text-align: center;
+        font-size: 14px;
+        font-family: 'Rubik-Medium';
+        line-height: 1.1;
+        padding-bottom: 10px;
+    }
+    
+    .inset-image-container:hover .after {
+        position: relative;
+        display: block;
+        background: rgba(0, 0, 0, 0.0);
+    }
+
     .prev {
         margin-left: 10px;
     }
@@ -668,7 +705,15 @@ pre {
     .inset-image-container {
         width: 100%;
     }
-
+    #galleryViewText {
+        display: none;
+    }
+    #galleryViewIcon {
+        height: 13px;
+    }
+    #detailCaption {
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 700px) {
