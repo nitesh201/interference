@@ -499,6 +499,7 @@ a:hover .linkDecorator {
 #slideshow {
     max-height: 80%;
     cursor: pointer;
+    height: 80%;
 }
 
 #modal-caption {
