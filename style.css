@@ -500,6 +500,9 @@ a:hover .linkDecorator {
     max-height: 80%;
     cursor: pointer;
     height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #modal-caption {
