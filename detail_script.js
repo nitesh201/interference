@@ -43,4 +43,6 @@ span.onclick = function() {
 }
 
 var moreInfo = document.getElementById("moreInfo");
-moreInfo.addEventListener("click", toggle_extended_captions);
+if (moreInfo) {
+    moreInfo.addEventListener("click", toggle_extended_captions);
+}
