@@ -374,6 +374,7 @@ body {
     margin-right: 25px;
     margin-top: 18px;
     margin-bottom: 25px;
+    hyphens: auto;
 }
 
 #detail {
@@ -610,6 +611,18 @@ pre {
 }
 
 @media screen and (max-width: 600px) {
+    .prev {
+        margin-left: 10px;
+    }
+
+    .next {
+        margin-right: 10px;
+    }
+
+    .image-container {
+        width: 50%;
+    }
+
     .contentGrid #right {
         grid-area: 2/ 1 / 8/ 9;
         z-index: 1;
@@ -655,6 +668,7 @@ pre {
     .inset-image-container {
         width: 100%;
     }
+
 }
 
 @media screen and (max-width: 700px) {
