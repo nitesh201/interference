@@ -455,7 +455,7 @@ body {
 }
 
 #hamburgerIcon {
-    height: 12px;
+    height: 18px;
 }
 
 p {
@@ -597,7 +597,7 @@ a:hover .linkDecorator {
     border-bottom: 2px solid black;
     overflow: auto;
     font-size: 16px;
-    line-height: 1.15;
+    line-height: 1.2;
     padding: 20px;
 }
 
@@ -819,7 +819,7 @@ screen and (max-width: 1100px) {
     }
 
     .contentGrid #right {
-        grid-area: 2/ 1/ 8/ 9;
+        grid-area: 2/ 1/ 10/ 9;
         position: relative;
     }
 
@@ -832,7 +832,7 @@ screen and (max-width: 1100px) {
         display: inline;
         position: absolute;
         right: 12px;
-        margin-top: 5px;
+        margin-top: 7px;
         font-size: 30px;
         cursor: pointer;
     }
@@ -934,7 +934,7 @@ screen and (max-width: 1100px) {
     .contentGrid #tabletHeader {
         padding: 5px;
         line-height: 1;
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .contentGrid #tabletFooter {
@@ -943,6 +943,6 @@ screen and (max-width: 1100px) {
     }
 
     .contentGrid #right {
-        font-size: 14px;
+        font-size: 18px;
     }
 }
