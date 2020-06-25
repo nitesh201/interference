@@ -325,6 +325,7 @@ body {
     height: 100%;
     display: none;
     color: #e6e2de;
+    font-family: 'Rubik-Medium';
 }
 
 .image-container:hover .after,
@@ -628,7 +629,6 @@ a:hover .linkDecorator {
         color: black;
         text-align: center;
         font-size: 14px;
-        font-family: 'Rubik-Medium';
         line-height: 1.1;
         padding-bottom: 10px;
     }
