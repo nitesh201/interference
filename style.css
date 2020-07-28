@@ -286,9 +286,12 @@ body {
 }
 
 .image-container {
+    display: flex;
     position: relative;
     box-sizing: border-box;
     width: 25%;
+    align-items: center;
+    justify-content: center;
 }
 
 .floatleft {
@@ -308,8 +311,6 @@ body {
 .image-container img {
     max-width: 90%;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
 .inset-image-container img {
